@@ -657,7 +657,7 @@ class ProfileScreen(Screens):
             if is_sc_instructor:
                 self.profile_elements["prevent_fading_text"] = pygame_gui.elements.UILabel(
                     pygame.Rect((85, 390), (-1, 30)),
-                    "The StarClan Guide will never fade",
+                    "The Starclan Guide will never fade",
                     object_id=get_text_box_theme("#cat_profile_info_box"))
             elif is_df_instructor:
                 self.profile_elements["prevent_fading_text"] = pygame_gui.elements.UILabel(
@@ -756,8 +756,6 @@ class ProfileScreen(Screens):
 
         # EYE COLOR
         output += 'eyes: ' + the_cat.eye_colour.lower()
-        if the_cat.eye_colour2:
-            output = output + ' and ' + the_cat.eye_colour2.lower()
         # NEWLINE ----------
         output += "\n"
 
@@ -934,18 +932,6 @@ class ProfileScreen(Screens):
         # NEWLINE ----------
         output += "\n"
 
-        # NUTRITION INFO (if the game is in the correct mode)
-        if game.clan.game_mode in ["expanded", "cruel season"] and the_cat.is_alive():
-            nutr = None
-            if the_cat.ID in game.clan.freshkill_pile.nutrition_info:
-                nutr = game.clan.freshkill_pile.nutrition_info[the_cat.ID]
-            if nutr:
-                output += "\n"
-                output += f"nutrition status: {round(nutr.percentage, 1)}%\n"
-            else:
-                output += "\n"
-                output += f"nutrition status: 100%\n"
-
         if the_cat.is_disabled():
             for condition in the_cat.permanent_condition:
                 if the_cat.permanent_condition[condition]['born_with'] is True and \
@@ -1079,7 +1065,8 @@ class ProfileScreen(Screens):
                 if str(self.the_cat.ID) in rel_data:
                     self.user_notes = rel_data.get(str(self.the_cat.ID))
         except Exception as e:
-            print(f"ERROR: there was an error reading the Notes file of cat #{self.the_cat.ID}.\n", e)
+            print(e)
+            print(f'WARNING: there was an error reading the Notes file of cat #{self.the_cat.ID}.')
 
     def toggle_history_sub_tab(self):
         """To toggle the history-sub-tab"""
@@ -1709,7 +1696,7 @@ class ProfileScreen(Screens):
                                                           starting_height=2, object_id="#promote_deputy_button")
                 self.toggle_deputy_button.disable()
 
-            if self.the_cat.status in ['elder', 'kitten', 'apprentice', 'medicine cat apprentice'] or self.the_cat.dead or self.the_cat.exiled or self.the_cat.outside:
+            if self.the_cat.status in ['elder', 'kitten', 'apprentice', 'medicine cat apprentice']:
                 self.retire_button.disable()
             else:
                 self.retire_button.enable()
@@ -2408,10 +2395,10 @@ class CeremonyScreen(Screens):
                              cat.virtues[8] + '.'
         else:
             if cat.trait == "bloodthirsty":
-                prev_lead_text = prev_lead + ' one of StarClan\'s oldest leaders, looks at the new leader with a conflicted expression. They give a last life, the gift of ' + \
+                prev_lead_text = prev_lead + ' one of Starclan\'s oldest leaders, looks at the new leader with a conflicted expression. They give a last life, the gift of ' + \
                              cat.virtues[8] + '.'
             else:
-                prev_lead_text = prev_lead + ' one of StarClan\'s oldest leaders, looks at the new leader with pride. They give a last life, the gift of ' + \
+                prev_lead_text = prev_lead + ' one of Starclan\'s oldest leaders, looks at the new leader with pride. They give a last life, the gift of ' + \
                                 cat.virtues[8] + '.'
         if known[8]:
             if cat.trait == "bloodthirsty":

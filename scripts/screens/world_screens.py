@@ -211,6 +211,7 @@ class OutsideClanScreen(Screens):
         # Generate object for the current cats
         pos_x = 0
         pos_y = 0
+        # print(self.current_listed_cats)
         if self.current_listed_cats != []:
             for cat in self.chunks(self.current_listed_cats, 20)[self.list_page - 1]:
                 update_sprite(cat)

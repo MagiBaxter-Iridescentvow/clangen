@@ -4,8 +4,7 @@
         "biome": "wetlands",
         "season": "Any",
         "tags": [
-            "hunting",
-			"small_prey"
+            "hunting"
         ],
         "intro_text": "Your patrol comes across a lizard.",
         "success_text": [
@@ -31,8 +30,7 @@
         "biome": "wetlands",
         "season": "Any",
         "tags": [
-            "hunting",
-			"medium_prey"
+            "hunting"
         ],
         "intro_text": "The patrol approaches a Twoleg nest perched on the edge of a swamp, with smoke rising from it's corner.",
         "decline_text": "The patrol decides to hunt elsewhere.",
@@ -78,11 +76,7 @@
         "biome": "wetlands",
         "season": "Any",
         "tags": [
-            "hunting",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2",
-			"large_prey3"
+            "hunting"
         ],
         "intro_text": "The patrol looks around for something to disguise their scent while hunting.",
         "decline_text": "On second thought, maybe not.",
@@ -119,11 +113,7 @@
         "biome": "wetlands",
         "season": "Any",
         "tags": [
-            "hunting",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2",
-			"large_prey3"
+            "hunting"
         ],
         "intro_text": "r_c looks around for something to disguise their scent while hunting.",
         "decline_text": "On second thought, maybe not.",
@@ -163,11 +153,7 @@
             "hunting",
             "apprentice",
             "injury",
-            "scar",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2",
-			"large_prey3"
+            "scar"
         ],
         "intro_text": "r_c's mentor assesses them by sending them on a solo hunt.",
         "decline_text": "r_c asks their mentor to do the assessment some other time.",
@@ -225,11 +211,7 @@
         "biome": "wetlands",
         "season": "Any",
         "tags": [
-            "hunting",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2",
-			"large_prey3"
+            "hunting"
         ],
         "intro_text": "r_c heads out into the swamps alone, wanting to sink their teeth into some prey and have some time to themselves.",
         "decline_text": "r_c turns back to camp, deciding that a group hunt would be more effective.",
@@ -284,11 +266,7 @@
         "season": "Any",
         "tags": [
             "hunting",
-            "deputy",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2",
-			"large_prey3"
+            "deputy"
         ],
         "intro_text": "r_c heads out into the swamps alone, wanting to sink their teeth into some prey and have some time to themselves.",
         "decline_text": "r_c turns back to camp, deciding that a group hunt would be more effective.",
@@ -343,11 +321,7 @@
         "season": "Any",
         "tags": [
             "hunting",
-            "leader",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2",
-			"large_prey3"
+            "leader"
         ],
         "intro_text": "r_c heads out into the swamps alone, wanting to sink their teeth into some prey and have some time to themselves.",
         "decline_text": "r_c turns back to camp, deciding that a group hunt would be more effective.",
@@ -403,8 +377,7 @@
         "tags": [
             "hunting",
             "gone",
-            "medium_prey0",
-            "medium_prey1"
+            "small_prey"
         ],
         "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Twolegs linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
@@ -465,8 +438,7 @@
         "tags": [
             "hunting",
             "gone",
-            "large_prey0",
-            "large_prey1"
+            "big_prey"
         ],
         "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Twolegs linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
@@ -527,8 +499,7 @@
         "tags": [
             "hunting",
             "multi_gone",
-            "medium_prey0",
-			"medium_prey1"
+            "big_prey"
         ],
         "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Twolegs linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
@@ -589,8 +560,7 @@
         "tags": [
             "hunting",
             "disaster_gone",
-            "large_prey0",
-            "large_prey1"
+            "big_prey"
         ],
         "intro_text": "Your patrol encounters a clearing of dry grassy ground where a lot of Twolegs linger.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
@@ -651,9 +621,7 @@
         "tags": [
             "hunting",
             "gone",
-            "medium_prey0",
-			"medium_prey2",
-			"large_prey3"
+            "small_prey"
         ],
         "intro_text": "r_c decides to hunt out near the Twoleg dens.",
         "decline_text": "On second thought, they decide to reline their nest today instead.",
@@ -716,9 +684,8 @@
         "tags": [
             "hunting",
             "gone",
-            "apprentice",
-            "medium_prey0",
-			"large_prey3"
+            "small_prey",
+            "apprentice"
         ],
         "intro_text": "app1 decides to hunt out near the Twoleg dens.",
         "decline_text": "On second thought, they decide to reline their nest today instead.",
@@ -781,8 +748,7 @@
             "gone",
             "small_prey",
             "romantic",
-            "platonic",
-			"medium_prey0"
+            "platonic"
         ],
         "intro_text": "Boldly, eyes daring p_l to say no, r_c suggests hunting by the Twoleg dens.",
         "decline_text": "On second thought, they decide to reline their nests today instead.",
@@ -848,8 +814,7 @@
             "small_prey",
             "apprentice",
             "romantic",
-            "platonic",
-			"medium_prey0"
+            "platonic"
         ],
         "intro_text": "Boldly, eyes daring app1 to say no, app2 suggests hunting by the Twoleg dens. Where apprentices are definitely not allowed.",
         "decline_text": "On second thought, they decide to reline their nests today instead.",
@@ -1029,7 +994,7 @@
             "retirement",
             "injury",
             "hunting",
-            "medium_prey"
+            "small_prey"
         ],
         "intro_text": "The patrol comes across a thunderpath running along a dry bank straight through the wetlands.",
         "decline_text": "They decide it is better not to cross.",
@@ -1089,8 +1054,8 @@
             "retirement",
             "injury",
             "hunting",
-            "cruel_season",
-            "medium_prey"
+            "small_prey",
+            "cruel_season"
         ],
         "intro_text": "The patrol comes across a thunderpath running along a dry bank straight through the wetlands.",
         "decline_text": "They decide it is better not to cross.",
@@ -1150,7 +1115,7 @@
             "retirement",
             "injury",
             "hunting",
-            "medium_prey"
+            "big_prey"
         ],
         "intro_text": "The patrol comes across a thunderpath running along a dry bank straight through the wetlands.",
         "decline_text": "They decide it is better not to cross.",
@@ -1211,8 +1176,7 @@
             "injury",
             "hunting",
             "big_prey",
-            "cruel_season",
-            "large_prey"
+            "cruel_season"
         ],
         "intro_text": "The patrol comes across a thunderpath running along a dry bank straight through the wetlands.",
         "decline_text": "They decide it is better not to cross.",
@@ -1354,8 +1318,7 @@
             "comfort",
             "romantic",
             "two_apprentices",
-            "apprentice",
-			"small_prey"
+            "apprentice"
         ],
         "intro_text": "Something skitters across the leaf litter, catching the patrols eyes. A little salamander!",
         "decline_text": "Startled by the salamander, the patrol watches it scurry away.",
@@ -1363,7 +1326,9 @@
         "exp": 15,
         "success_text": [
             "app1 pounces on the little creature and misses, but they don't seem overly concerned, stopping nearly every step to chat to app2, who's just as keen to talk.",
-            "app1 and app2 go for the prey at the same time, bonking their heads together. It makes both of them laugh while apologizing, and they don't leave each other's side for the rest of the patrol, apologies turning to chatting turning to whispered conversations."
+            "app1 and app2 go for the prey at the same time, bonking their heads together. It makes both of them laugh while apologizing, and they don't leave each other's side for the rest of the patrol, apologies turning to chatting turning to whispered conversations.",
+            null,
+            null
         ],
         "fail_text": [
             "The patrol is unable to catch the small amphibian quick enough and the little salamander lives another day."
@@ -1395,24 +1360,21 @@
         "season": "leaf-bare",
         "tags": [
             "hunting",
+            "big_prey",
             "comfort",
             "trust",
             "patrol_to_p_l",
-            "patrol_to_r_c",
-            "small_prey0",
-			"medium_prey1",
-			"medium_prey2",
-			"large_prey3"
+            "patrol_to_r_c"
         ],
         "intro_text": "It starts snowing soon after the patrol sets out, trying to bring back something nice for the freshkill pile.",
         "decline_text": "They decide to turn back and wait until the snow dies down.",
         "chance_of_success": 50,
         "exp": 10,
         "success_text": [
-            "Despite the snow, the patrol manages to hunt successfully, finding the swamp still busy with birds oblivious to leaf-bare. With the wetlands to provide there's more than enough to bring a good haul back to c_n, and as p_l leads them home there's a sense of security and competence driving them onwards.",
+            "Despite the snow, the patrol manages to hunt successfully, finding the swamp still busy with birds oblivious to Leaf-bare. With the wetlands to provide there's more than enough to bring a good haul back to c_n, and as p_l leads them home there's a sense of security and competence driving them onwards.",
             null,
             "Everyone looks admiringly at s_c by the end of the afternoon. Every cat carries something home, but nearly all of it was caught by s_c.",
-            "s_c really keeps the patrol on task and motivated through the sharp cold of the leaf-bare morning, not through authority or commands, but with a gentle voice and compassionate understanding that encourages every cat to do their best for c_n."
+            "s_c really keeps the patrol on task and motivated through the sharp cold of the Leaf-bare morning, not through authority or commands, but with a gentle voice and compassionate understanding that encourages every cat to do their best for c_n."
         ],
         "fail_text": [
             "The prey must be hiding; the patrol catches nothing. As a snowstorm descends and visibility drops, the patrol retreats to a chump of tangled trees, their pelts and tails and legs all tightly wrapped into one indistinguishable kitty cat ball while they wait for the storm to blow over.",
@@ -1442,7 +1404,7 @@
         "antagonize_text": null,
         "antagonize_fail_text": null,
         "history_text": [
-            "r_c caught a chill while hunting in leaf-bare.",
+            "r_c caught a chill while hunting in Leaf-bare.",
             null
         ]
     },
@@ -1452,9 +1414,7 @@
         "season": "leaf-bare",
         "tags": [
             "hunting",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2"
+            "small_prey"
         ],
         "intro_text": "It starts snowing soon after the patrol sets out, trying to bring back something nice for the freshkill pile.",
         "decline_text": "They decide to turn back and wait until the snow dies down.",
@@ -1489,7 +1449,7 @@
         "antagonize_text": null,
         "antagonize_fail_text": null,
         "history_text": [
-            "r_c caught a chill while hunting in leaf-bare.",
+            "r_c caught a chill while hunting in Leaf-bare.",
             null
         ]
     },
@@ -1499,6 +1459,7 @@
         "season": "leaf-bare",
         "tags": [
             "hunting",
+            "small_prey",
             "comfort",
             "trust",
             "rel_patrol",
@@ -1543,7 +1504,7 @@
         "antagonize_text": null,
         "antagonize_fail_text": null,
         "history_text": [
-            "r_c caught a chill while hunting in leaf-bare.",
+            "r_c caught a chill while hunting in Leaf-bare.",
             null
         ]
     },
@@ -1553,16 +1514,13 @@
         "season": "Any",
         "tags": [
             "hunting",
+            "big_prey",
             "fighting",
             "scar",
             "injury",
             "clan_to_patrol",
             "respect",
-            "rel_patrol",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2",
-			"large_prey3"
+            "rel_patrol"
         ],
         "intro_text": "Your patrol catches the scent of a red fox. Tracking it, they find the animal feeding on a gigantic dead eel it's fished from the swamp, although whether the eel was dead before the fox found it is up for debate.",
         "decline_text": "Your patrol decides not to quarrel with the fox and to find prey elsewhere.",
@@ -1621,16 +1579,13 @@
         "season": "Any",
         "tags": [
             "hunting",
+            "big_prey",
             "fighting",
             "scar",
             "injury",
             "clan_to_patrol",
             "respect",
-            "rel_patrol",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2",
-			"large_prey3"
+            "rel_patrol"
         ],
         "intro_text": "Your patrol catches the scent of a red fox. Tracking it, they find the animal feeding on a gigantic dead eel it's fished from the swamp, although whether the eel was dead before the fox found it is up for debate.",
         "decline_text": "Your patrol decides not to quarrel with the fox and to find prey elsewhere.",
@@ -1688,15 +1643,12 @@
         "season": "Any",
         "tags": [
             "hunting",
+            "big_prey",
             "fighting",
             "scar",
             "injury",
             "clan_to_patrol",
-            "respect",
-			"medium_prey0",
-			"medium_prey1",
-			"large_prey2",
-			"large_prey3"
+            "respect"
         ],
         "intro_text": "r_c catches the scent of a red fox. Tracking it, they find the animal feeding on a gigantic dead eel it's fished from the swamp, although whether the eel was dead before the fox found it is up for debate.",
         "decline_text": "r_c decides not to quarrel with the fox and to find prey elsewhere.",

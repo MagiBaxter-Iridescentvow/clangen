@@ -4,24 +4,22 @@
         "biome": "desert",
         "season": "Any",
         "tags": [
-            "hunting",
-            "medium_prey0",
-            "large_prey1"
+            "hunting"
         ],
-        "intro_text": "The patrol approaches a very strange Twolegplace. Gigantic metal leaves lie in unnatural rows, shading the desert beneath them, metal tree branches snake straightly across the ground, and a little Twoleg hut sits in one corner, seemingly abandoned.",
+        "intro_text": "The patrol approaches a very strange twoleg place. Gigantic metal leaves lie in unnatural rows, shading the desert beneath them, metal tree branches snake straightly across the ground, and a little twoleg hut sits in one corner, seemingly abandoned.",
         "decline_text": "The patrol decides to hunt elsewhere.",
         "chance_of_success": 40,
         "exp": 20,
         "success_text": [
-            "The patrol has a successful hunt. While Twolegs seem to have built this metal forest, they've also apparently abandoned it.",
-            "The shade of the metal forest offers countless desert creatures as possible prey, and the cats have a very successful hunt, hiding from the sunlight under Twoleg leaves."
+            "The patrol has a successful hunt. While twolegs seem to have built this metal forest, they've also apparently abandoned it.",
+            "The shade of the metal forest offers countless desert creatures as possible prey, and the cats have a very successful hunt, hiding from the sunlight under twoleg leaves."
         ],
         "fail_text": [
             "The patrol tries, but the unnatural environment causes everyone to be on edge, and their hunt is unsuccessful."
         ],
         "min_cats": 1,
         "max_cats": 3,
-        "antagonize_text": "The cats leap onto a Twoleg metal leaf, sending it over with a mighty crash. This is c_n territory, not Twoleg!",
+        "antagonize_text": "The cats leap onto a twoleg metal leaf, sending it over with a mighty crash. This is c_n territory, not twoleg!",
         "antagonize_fail_text": "Your cats try to knock over a metal leaf, but there aren't enough of them to force it over."
     },
     {
@@ -29,36 +27,30 @@
         "biome": "desert",
         "season": "Any",
         "tags": [
-            "hunting",
-            "medium_prey0",
-            "large_prey1"
+            "hunting"
         ],
-        "intro_text": "The patrol approaches a very strange Twolegplace. Gigantic metal leaves lie in unnatural rows, shading the desert beneath them, metal tree branches snake straightly across the ground, and a little Twoleg hut sits in one corner, seemingly abandoned.",
+        "intro_text": "The patrol approaches a very strange twoleg place. Gigantic metal leaves lie in unnatural rows, shading the desert beneath them, metal tree branches snake straightly across the ground, and a little twoleg hut sits in one corner, seemingly abandoned.",
         "decline_text": "The patrol decides to hunt elsewhere.",
         "chance_of_success": 60,
         "exp": 20,
         "success_text": [
             "The patrol cats split up, using sentries to ensure that nothing disturbs their hunts.",
-            "The shade of the metal forest offers countless desert creatures as possible prey, and the cats have a very successful hunt, hiding from the sunlight under Twoleg leaves. "
+            "The shade of the metal forest offers countless desert creatures as possible prey, and the cats have a very successful hunt, hiding from the sunlight under twoleg leaves. "
         ],
         "fail_text": [
             "The patrol tries, but the unnatural environment causes everyone to be on edge, and their hunt is unsuccessful."
         ],
         "min_cats": 4,
         "max_cats": 6,
-        "antagonize_text": "The cats leap onto a Twoleg metal leaf, sending it over with a mighty crash. This is c_n territory, not Twoleg!",
-        "antagonize_fail_text": "The cats try to knock over a metal leaf. It works, but several members of the patrol spring backward, yowling in pain - the Twolegs have trapped the leaf, storing fire that does not burn in it!"
+        "antagonize_text": "The cats leap onto a twoleg metal leaf, sending it over with a mighty crash. This is c_n territory, not twoleg!",
+        "antagonize_fail_text": "The cats try to knock over a metal leaf. It works, but several members of the patrol spring backward, yowling in pain - the twolegs have trapped the leaf, storing fire that does not burn in it!"
     },
     {
         "patrol_id": "dst_hunt_strange1",
         "biome": "desert",
         "season": "Any",
         "tags": [
-            "hunting",
-            "medium_prey0",
-            "medium_prey1",
-            "large_prey2",
-            "large_prey3"
+            "hunting"
         ],
         "intro_text": "The patrol looks around for something to disguise their scent while hunting.",
         "decline_text": "On second thought, maybe not.",
@@ -95,11 +87,7 @@
         "biome": "desert",
         "season": "Any",
         "tags": [
-            "hunting",
-            "medium_prey0",
-            "medium_prey1",
-            "large_prey2",
-            "large_prey3"
+            "hunting"
         ],
         "intro_text": "r_c looks around for something to disguise their scent while hunting.",
         "decline_text": "On second thought, maybe not.",
@@ -139,10 +127,7 @@
             "hunting",
             "apprentice",
             "injury",
-            "scar",
-            "medium_prey0",
-            "large_prey1",
-            "large_prey2"
+            "scar"
         ],
         "intro_text": "r_c's mentor assesses them by sending them on a solo hunt.",
         "decline_text": "r_c asks their mentor to do the assessment some other time.",
@@ -200,8 +185,7 @@
         "biome": "desert",
         "season": "Any",
         "tags": [
-            "hunting",
-            "medium_prey"
+            "hunting"
         ],
         "intro_text": "r_c heads out into the desert alone, wanting to sink their teeth into some prey and have some time to themselves.",
         "decline_text": "r_c turns back to camp, deciding that a group hunt would be more effective.",
@@ -256,9 +240,7 @@
         "season": "Any",
         "tags": [
             "hunting",
-            "deputy",
-            "apprentice",
-            "medium_prey"
+            "deputy"
         ],
         "intro_text": "r_c heads out into the desert alone, wanting to sink their teeth into some prey and have some time to themselves.",
         "decline_text": "r_c turns back to camp, deciding that a group hunt would be more effective.",
@@ -313,8 +295,7 @@
         "season": "Any",
         "tags": [
             "hunting",
-            "leader",
-            "medium_prey"
+            "leader"
         ],
         "intro_text": "r_c heads out into the desert  alone, wanting to sink their teeth into some prey and have some time to themselves.",
         "decline_text": "r_c turns back to camp, deciding that a group hunt would be more effective.",
@@ -378,7 +359,7 @@
         "exp": 20,
         "success_text": [
             "r_c immediately turns and heads for home to report this to their leader, alarmed by the sudden presence of Twolegs in their territory.",
-            "Slyly, r_c uses the unusual presence of the weird Twolegs to help their hunt, hiding on the outskirts of the area and waiting for the Twolegs to flush prey towards them. It works, and they leave the Twolegs to their business.",
+            "Slyly, r_c uses the unusual presence of the weird twolegs to help their hunt, hiding on the outskirts of the area and waiting for the Twolegs to flush prey towards them. It works, and they leave the Twolegs to their business.",
             "s_c spots the Twolegs unloading metal boxes from their monsters, and recognises that it can't be anything good, leaving immediately.",
             "s_c spits in the Twolegs' direction and picking a different place to hunt."
         ],
@@ -439,9 +420,9 @@
         "exp": 20,
         "success_text": [
             "Your patrol immediately turns and heads for home to report this to their leader, alarmed by the sudden presence of Twolegs in their territory.",
-            "Slyly, the cats use the unusual presence of the weird Twolegs to help their hunt, hiding on the outskirts of the area and waiting for the Twolegs to flush prey towards them. It works, and they leave the Twolegs to their business.",
+            "Slyly, the cats use the unusual presence of the weird twolegs to help their hunt, hiding on the outskirts of the area and waiting for the Twolegs to flush prey towards them. It works, and they leave the Twolegs to their business.",
             "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "s_c stops anyone from going near the Twolegs, repeating that true warriors have nothing to do with Twolegs and their monsters, and the patrol leaves back into the desert."
+            "s_c stops anyone from going near the twolegs, repeating that true warriors have nothing to do with Twolegs and their monsters, and the patrol leaves back into the desert."
         ],
         "fail_text": [
             null,
@@ -492,7 +473,7 @@
         "tags": [
             "hunting",
             "gone",
-            "small_prey"
+            "big_prey"
         ],
         "intro_text": "r_c encounters a swarm of Twolegs, gathered in a dry riverbed.",
         "decline_text": "Your patrol decides to hunt elsewhere.",
@@ -500,9 +481,9 @@
         "exp": 20,
         "success_text": [
             "Your patrol immediately turns and heads for home to report this to their leader, alarmed by the sudden presence of Twolegs in their territory.",
-            "Slyly, the cats use the unusual presence of the weird Twolegs to help their hunt, hiding on the outskirts of the area and waiting for the Twolegs to flush prey towards them. It works, and they leave the Twolegs to their business.",
+            "Slyly, the cats use the unusual presence of the weird twolegs to help their hunt, hiding on the outskirts of the area and waiting for the Twolegs to flush prey towards them. It works, and they leave the Twolegs to their business.",
             "s_c spots the Twolegs unloading metal boxes from their monsters, and abruptly tells the patrol to leave. Now.",
-            "s_c stops anyone from going near the Twolegs, repeating that true warriors have nothing to do with Twolegs and their monsters, and the patrol leaves back into the desert."
+            "s_c stops anyone from going near the twolegs, repeating that true warriors have nothing to do with Twolegs and their monsters, and the patrol leaves back into the desert."
         ],
         "fail_text": [
             null,
@@ -556,7 +537,7 @@
             "retirement",
             "injury",
             "hunting",
-            "medium_prey"
+            "small_prey"
         ],
         "intro_text": "The patrol comes across a thunderpath running through the desert.",
         "decline_text": "They decide it is better not to cross.",
@@ -604,7 +585,7 @@
         "history_text": [
             "r_c was heavily injured by a monster, and carries the scars from it.",
             "r_c was hit by a monster and killed.",
-            "were hit by a monster"
+        "were hit by a monster"
         ]
     },
     {
@@ -617,8 +598,8 @@
             "retirement",
             "injury",
             "hunting",
-            "cruel_season",
-            "medium_prey"
+            "small_prey",
+            "cruel_season"
         ],
         "intro_text": "The patrol comes across a thunderpath running through the desert.",
         "decline_text": "They decide it is better not to cross.",
@@ -666,7 +647,7 @@
         "history_text": [
             "r_c was heavily injured by a monster, and carries the scars from it.",
             "r_c was hit by a monster and killed.",
-            "were hit by a monster"
+        "were hit by a monster"
         ]
     },
     {
@@ -679,8 +660,7 @@
             "death",
             "small_prey",
             "warrior",
-            "no_app",
-            "small_prey"
+            "no_app"
         ],
         "intro_text": "The sun beats down on the desert, driving every creature away from it's gaze with blinding heat.",
         "decline_text": "Giving up on the hunt, r_c finds a burrow to wait out the heat of the day until they can return back to camp.",
@@ -736,8 +716,7 @@
             "hunting",
             "illness",
             "death",
-            "apprentice",
-            "small_prey"
+            "apprentice"
         ],
         "intro_text": "The sun beats down on the desert, driving every creature away from it's gaze with blinding heat.",
         "decline_text": "Giving up on the hunt, r_c finds a burrow to wait out the heat of the day until they can return back to camp.",
@@ -799,9 +778,9 @@
             "hunting",
             "illness",
             "death",
+            "small_prey",
             "warrior",
-            "no_app",
-            "small_prey"
+            "no_app"
         ],
         "intro_text": "The sun beats down on the desert, driving every creature away from it's gaze with blinding heat.",
         "decline_text": "Giving up on the hunt, r_c finds a burrow to wait out the heat of the day until they can return back to camp.",
@@ -856,8 +835,7 @@
             "hunting",
             "illness",
             "death",
-            "apprentice",
-            "small_prey"
+            "apprentice"
         ],
         "intro_text": "The sun beats down on the desert, driving every creature away from it's gaze with blinding heat.",
         "decline_text": "Giving up on the hunt, r_c finds a burrow to wait out the heat of the day until they can return back to camp.",
@@ -915,8 +893,7 @@
             "death",
             "small_prey",
             "warrior",
-            "no_app",
-            "small_prey"
+            "no_app"
         ],
         "intro_text": "The sun beats down on the desert, driving every creature away from it's gaze with blinding heat.",
         "decline_text": "Giving up on the hunt, r_c finds a burrow to wait out the heat of the day until they can return back to camp.",
@@ -971,8 +948,7 @@
             "hunting",
             "illness",
             "death",
-            "apprentice",
-            "small_prey"
+            "apprentice"
         ],
         "intro_text": "The sun beats down on the desert, driving every creature away from it's gaze with blinding heat.",
         "decline_text": "Giving up on the hunt, r_c finds a burrow to wait out the heat of the day until they can return back to camp.",
