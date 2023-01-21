@@ -596,19 +596,19 @@ class Name():
             'Rowan', 'Fox'
         ],
         'LILAC2': [
-            'FLower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
+            'Flower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
         ],
         'DARKLILAC': [
-            'FLower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
+            'Flower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
         ],
         'PALELILAC': [
-            'FLower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
+            'Flower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
         ],
         'LIGHTLILAC': [
-            'FLower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
+            'Flower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
         ],
         'ROSE': [
-            'FLower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
+            'Flower', 'Petal', 'Lilac', 'Lily', 'Pink', 'Heather', 'Rose', 'Lavender'
         ],
         'CREAM4': [
             'Sand', 'Yellow', 'Pale', 'Cream', 'Light', 'Milk', 'Fawn',
