@@ -245,7 +245,7 @@ def init_pelt(cat):
                                   "ROSE", "LIGHTGOLD", "GOLDEN2", "DARKGOLD", "HONEY", "LIGHTSILVER", "SILVER2", "DARKSILVER",
                                   "PALEBLUE", "LIGHTBLUE", "BLUE1", "RUSSIAN", "DARKBLUE"])
     if cat.pelt.name in ['DarkTabby', "DilutedTabby", "DilutedTabby", "Tonkinese", "DilutedTonkinese",
-                        "DilutedBengal", "DilutedSpeckled", "DilutedMarbled", "Freckled", "DilutedFreckled", "Somali", "DilutedTicked", 
+                        "DilutedBengal", "DilutedSpeckled", "DilutedMarbled", "Freckled", "DilutedFreckled", "Somali", "TickedDilute", 
                         "DilutedRosette", "DilutedClassic", "DilutedSokoke", "MackerelDilute", "DarkMackerel", "DarkSpeckled", "DarkSokoke",
                         "DarkRosette", "DarkClassic", "DarkMarbled", "DarkBengal"]:
         cat.pelt.colour = choice(["WHITE3", "PALEGREY2", "LIGHTGREY3", "GREY3", "DARKGREY3", "STONE", "COAL", "OBSIDIAN",
@@ -348,8 +348,8 @@ def init_pattern(cat):
             cat.tortiecolour = choice(basic_colours)
         if cat.tortiebase in [
             'freckled', 'somali', 'dilutedtabby', 'dilutedbengal', 'dilutedmarbled',
-            'dilutedticked', 'somali', 'dilutedrosette', 'dilutedspeckled', 'dilutedclassic', 'dilutedsokoke',
-            'freckled', 'dilutedfreckled', 'dilutedmackerel', 'tonkinese', 'dilutedtonkinese']:
+            'tickeddilute', 'somali', 'dilutedrosette', 'dilutedspeckled', 'dilutedclassic', 'dilutedsokoke',
+            'freckled', 'dilutedfreckled', 'mackereldilute', 'tonkinese', 'dilutedtonkinese']:
             cat.tortiecolour = choice(dilute_pelt_c)
     
         if cat.tortiebase in ['smoke', 'rosette']:
@@ -385,7 +385,7 @@ def init_white_patches(cat):
          'Spotted', 'Cloudy', 'Classic', 'Mackerel', 'Sokoke',
          'Gradient', 'Siamese', 'Ragdoll', 'Shaded',
          'Freckled', 'Tonkinese', 'DilutedTabby', 'DilutedSpeckled',  'DilutedMarbled',
-         'DilutedBengal', 'DilutedTicked', 'Somali', 'DilutedRosette', 'DilutedClassic', 'DilutedMackerel',
+         'DilutedBengal', 'TickedDilute', 'Somali', 'DilutedRosette', 'DilutedClassic', 'MackerelDilute',
          'DilutedFreckled', 'DilutedTonkinese', 'DilutedSokoke', 'DarkTabby', 'DarkMarbled', 'DarkSpeckled',
          'DarkBengal', 'DarkClassic', 'DarkMackerel', 'DarkSokoke', 'DarkRosette']:
         non_white_pelt = True
