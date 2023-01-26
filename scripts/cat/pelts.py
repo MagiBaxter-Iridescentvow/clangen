@@ -1996,21 +1996,6 @@ def choose_pelt(gender,colour=None,white=None,pelt=None,length=None,determined=F
             pelt = choice(pelt_names_M)
     if length is None:
         length = choice(pelt_length)
-    def choose_pelt(gender,colour=None,white=None,pelt=None,length=None,determined=False):
-        if pelt is None:
-            a = randint(0, 100)
-        if a != 1:
-            pelt = choice(pelt_names_F) if gender == "female" else choice(pelt_names_M)
-        else:
-            pelt = choice(pelt_names_F)
-            if gender == 'male' and pelt in ['Tortie', 'Calico']:
-                print("Male tortie/calico!")
-            elif pelt in ['Tortie', 'Calico'] and gender == 'male' and not determined:
-                a = randint(0, 200)
-        if a != 1:
-            pelt = choice(pelt_names_M)
-    if length is None:
-        length = choice(pelt_length)
     if pelt == "SingleColour":
         if colour is None and not white:
             return SingleColour(choice(pelt_colours), length)
@@ -2076,51 +2061,51 @@ def choose_pelt(gender,colour=None,white=None,pelt=None,length=None,determined=F
             return Bengal(colour, white, length)
     elif pelt == "Snowflake":
         if colour is None and white is None:
-            return Snowflake(choice(basic_c_no_cream_no_ghost), choice([False, True]), length)
+            return Snowflake(choice(basic_colours), choice([False, True]), length)
         elif colour is None:
-            return Snowflake(choice(basic_c_no_cream_no_ghost), white, length)
+            return Snowflake(choice(basic_colours), white, length)
         else:
             return Snowflake(colour, white, length)
     elif pelt == "Abyssinian":
         if colour is None and white is None:
-            return Abyssinian(choice(basic_c_no_cream_no_ghost), choice([False, True]), length)
+            return Abyssinian(choice(basic_colours), choice([False, True]), length)
         elif colour is None:
-            return Abyssinian(choice(basic_c_no_cream_no_ghost), white, length)
+            return Abyssinian(choice(basic_colours), white, length)
         else:
             return Abyssinian(colour, white, length)
     elif pelt == "Merle":
         if colour is None and white is None:
-            return Merle(choice(basic_c_no_cream_no_ghost), choice([False, True]), length)
+            return Merle(choice(basic_colours), choice([False, True]), length)
         elif colour is None:
-            return Merle(choice(basic_c_no_cream_no_ghost), white, length)
+            return Merle(choice(basic_colours), white, length)
         else:
             return Merle(colour, white, length)
     elif pelt == "Clouded":
         if colour is None and white is None:
-            return Clouded(choice(basic_c_no_cream_no_ghost), choice([False, True]), length)
+            return Clouded(choice(basic_colours), choice([False, True]), length)
         elif colour is None:
-            return Clouded(choice(basic_c_no_cream_no_ghost), white, length)
+            return Clouded(choice(basic_colours), white, length)
         else:
             return Clouded(colour, white, length)
     elif pelt == "Doberman":
         if colour is None and white is None:
-            return Doberman(choice(basic_c_no_cream_no_ghost), choice([False, True]), length)
+            return Doberman(choice(basic_colours), choice([False, True]), length)
         elif colour is None:
-            return Doberman(choice(basic_c_no_cream_no_ghost), white, length)
+            return Doberman(choice(basic_colours), white, length)
         else:
             return Doberman(colour, white, length)
     elif pelt == "Pinstripe":
         if colour is None and white is None:
-            return Pinstripe(choice(basic_c_no_cream_no_ghost), choice([False, True]), length)
+            return Pinstripe(choice(basic_colours), choice([False, True]), length)
         elif colour is None:
-            return Pinstripe(choice(basic_c_no_cream_no_ghost), white, length)
+            return Pinstripe(choice(basic_colours), white, length)
         else:
             return Pinstripe(colour, white, length)
     elif pelt == "Ghost":
         if colour is None and white is None:
-            return Ghost(choice(basic_c_no_cream_no_ghost), choice([False, True]), length)
+            return Ghost(choice(basic_colours), choice([False, True]), length)
         elif colour is None:
-            return Ghost(choice(basic_c_no_cream_no_ghost), white, length)
+            return Ghost(choice(basic_colours), white, length)
         else:
             return Ghost(colour, white, length)
     elif pelt == "Spotted":

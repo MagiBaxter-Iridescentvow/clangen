@@ -208,8 +208,7 @@ def init_pelt(cat):
                                 choice([par1.pelt.name, par2.pelt.name, None]), choice([par1.pelt.length, par2.pelt.length, None]))                  
     else:
         cat.pelt = choose_pelt(cat.gender)
-    if cat.pelt.name in ['Pinstripe', 'Clouded', 'Merle', 'Abyssinian', 'Ghost', 'Snowflake',
-                         'Doberman', 'Spotted', 'Classic', 'Mackerel', 'Sokoke']:
+    if cat.pelt.name in ['Spotted', 'Classic', 'Mackerel', 'Sokoke']:
             cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK",
                                       "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN",
                                       "BROWN", "DARKBROWN"])
@@ -217,7 +216,8 @@ def init_pelt(cat):
             cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK",
                                       "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN",
                                       "BROWN", "DARKBROWN", "CREAM"])
-    if cat.pelt.name in ['Agouti']:
+    if cat.pelt.name in ['Pinstripe', 'Clouded', 'Merle', 'Abyssinian', 'Ghost', 'Snowflake',
+                         'Doberman', 'Agouti']:
             cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK",
                                       "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN",
                                       "BROWN", "DARKBROWN", "CREAM", "GHOST"])
@@ -345,12 +345,11 @@ def init_pattern(cat):
             cat.pattern = choice(basic_patch_colours)
         else:
             cat.pattern = choice(patch_colours)
-        if cat.tortiebase in ['pinstripe', 'doberman', 'ghost', 'clouded', 'merle', 'abyssinian', 'snowflake', 'spotted',
-                    'classic', 'sokoke', 'mackerel']:
+        if cat.tortiebase in ['spotted', 'classic', 'sokoke', 'mackerel']:
             cat.tortiecolour = choice(basic_c_no_cream_no_ghost)
         if cat.tortiebase in ['cloudy', 'ragdoll', 'shaded', 'gradient', 'ponit']:
             cat.tortiecolour = choice(basic_colours_no_ghost)
-        if cat.tortiebase in ['agouti']:
+        if cat.tortiebase in ['pinstripe', 'doberman', 'ghost', 'clouded', 'merle', 'abyssinian', 'snowflake', 'agouti']:
             cat.tortiecolour = choice(basic_colours)
         if cat.tortiebase in [
             'freckled', 'somali', 'dilutedtabby', 'dilutedbengal', 'dilutedmarbled',
