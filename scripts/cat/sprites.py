@@ -338,7 +338,7 @@ for x in [
         'scarsdark', 'scarsdarkextra', 'collars', 'collarsextra',
         'bellcollars', 'bellcollarsextra', 'bowcollars', 'bowcollarsextra',
         'bengalcolours', 'bengalextra', 'marbledcolours', 'marbledextra',
-        'rosettecolours', 'rosetteextra', 'smokecolours', 'smokeextra', 'tickedcolors', 'tickedextra',
+        'rosettecolours', 'rosetteextra', 'smokecolours', 'smokeextra', 'tickedcolours', 'tickedextra',
         'whitepatchesryos', 'whitepatchesryosextra', 'whitepatchesbeejeans', 'whitepatchesbeejeansextra',
         'Newscars', 'Newscarsextra', 'shaders', 'lineartdead',
         'tortiecolourssolid', 'tortiecolourstabby', 'tortiecoloursbengal', 'tortiecoloursmarbled',
