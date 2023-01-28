@@ -1343,13 +1343,13 @@ for a, i in enumerate(['LIGHTBROWN', 'BROWN', 'DARKBROWN', 'BLACK']):
     sprites.make_group('abyssinian', (a, 2), f'abyssinian{i}')
     sprites.make_group('abyssinianextra', (a, 2), f'abyssinianextra{i}', sprites_y=2)
 #clouded
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'BLACK']):
+for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST']):
     sprites.make_group('clouded', (a, 0), f'clouded{i}')
     sprites.make_group('cloudedextra', (a, 0), f'cloudedextra{i}', sprites_y=2)
-for a, i in enumerate(['PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER']):
+for a, i in enumerate(['PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'CREAM']):
     sprites.make_group('clouded', (a, 1), f'clouded{i}')
     sprites.make_group('cloudedextra', (a, 1), f'cloudedextra{i}', sprites_y=2)
-for a, i in enumerate(['LIGHTBROWN', 'BROWN', 'DARKBROWN']):
+for a, i in enumerate(['LIGHTBROWN', 'BROWN', 'DARKBROWN', 'BLACK']):
     sprites.make_group('clouded', (a, 2), f'clouded{i}')
     sprites.make_group('cloudedextra', (a, 2), f'cloudedextra{i}', sprites_y=2)
 #ragdoll
