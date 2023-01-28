@@ -212,11 +212,11 @@ def init_pelt(cat):
             cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK",
                                       "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN",
                                       "BROWN", "DARKBROWN"])
-    if cat.pelt.name in ['Cloudy', 'Ragdoll', 'Shaded', 'Gradient', 'Ponit']:
+    if cat.pelt.name in ['Ragdoll', 'Shaded', 'Gradient', 'Ponit']:
             cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK",
                                       "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN",
                                       "BROWN", "DARKBROWN", "CREAM"])
-    if cat.pelt.name in ['Pinstripe', 'Clouded', 'Merle', 'Abyssinian', 'Ghost', 'Snowflake',
+    if cat.pelt.name in ['Cloudy', 'Pinstripe', 'Clouded', 'Merle', 'Abyssinian', 'Ghost', 'Snowflake',
                          'Doberman', 'Agouti']:
             cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK",
                                       "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN",

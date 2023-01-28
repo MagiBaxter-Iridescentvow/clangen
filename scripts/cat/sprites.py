@@ -1433,13 +1433,13 @@ for a, i in enumerate(['LIGHTBROWN', 'BROWN', 'DARKBROWN']):
     sprites.make_group('spotted', (a, 2), f'spotted{i}')
     sprites.make_group('spottedextra', (a, 2), f'spottedextra{i}', sprites_y=2)
 #cloudy
-for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'BLACK']):
+for a, i in enumerate(['WHITE', 'PALEGREY', 'SILVER', 'GREY', 'DARKGREY', 'GHOST']):
     sprites.make_group('cloudycolours', (a, 0), f'cloudy{i}')
     sprites.make_group('cloudyextra', (a, 0), f'cloudyextra{i}', sprites_y=2)
 for a, i in enumerate(['PALEGINGER', 'GOLDEN', 'GINGER', 'DARKGINGER', 'CREAM']):
     sprites.make_group('cloudycolours', (a, 1), f'cloudy{i}')
     sprites.make_group('cloudyextra', (a, 1), f'cloudyextra{i}', sprites_y=2)
-for a, i in enumerate(['LIGHTBROWN', 'BROWN', 'DARKBROWN']):
+for a, i in enumerate(['LIGHTBROWN', 'BROWN', 'DARKBROWN', 'BLACK']):
     sprites.make_group('cloudycolours', (a, 2), f'cloudy{i}')
     sprites.make_group('cloudyextra', (a, 2), f'cloudyextra{i}', sprites_y=2)
 #classic
