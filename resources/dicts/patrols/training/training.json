@@ -3,14 +3,14 @@
     "patrol_id": "gen_train_berrybush1",
     "biome": "Any",
     "season": "greenleaf",
-    "tags": ["herbs", "training", "injury", "poisoned", "comfort", "trust"],
+    "tags": ["herb", "raspberry", "training", "injury", "poisoned", "comfort", "trust", "no_herbs0", "no_herbs2"],
     "intro_text": "While out training, r_c stumbles upon a bush of red berries.",
     "decline_text": "r_c decides not to touch the berries.",
     "chance_of_success": 80,
     "exp": 20,
     "success_text": [
         "Unsure but remembering the kittentales of red deathberries, r_c avoids them, and gives the rest of the patrol a head's up about the potentially dangerous bush.",
-        "After careful consideration and consulting with the other cats, r_c recognizes them as strawberries and brings the rare berries back to the medicine cat's den.",
+        "After careful consideration and consulting with the other cats, r_c recognizes them as raspberries and brings the rare berries back to the medicine cat's den.",
         "Astutely, s_c recognises the cranberries, and carefully chews off a branch laden with them to bring back to camp - the herb stocks can use this odd fruit."
     ],
     "fail_text": [
@@ -29,14 +29,14 @@
     "patrol_id": "gen_train_berrybush2",
     "biome": "Any",
     "season": "greenleaf",
-    "tags": ["herbs", "training", "apprentice", "injury", "poisoned", "death"],
+    "tags": ["herb", "raspberry","training", "apprentice", "injury", "poisoned", "death", "no_herbs0"],
     "intro_text": "While helping gathering herbs, r_c stumbles upon a bush of red berries.",
     "decline_text": "r_c decides not to touch the berries.",
     "chance_of_success": 80,
     "exp": 20,
     "success_text": [
         "Unsure but remembering the kittentales of red deathberries, app1 avoids them and alerts the patrol, who, extremely worried, confirm that this a deathberry bush.",
-        "Whatever. Identifying them is a medicine cat problem. app1 plucks the berries and brings them back to camp, where it turns out they're called strawberries."
+        "Whatever. Identifying them is a medicine cat problem. app1 plucks the berries and brings them back to camp, where it turns out they're called raspberries."
     ],
     "fail_text": [
         "Confidently gathering them and prancing back to camp, app1 is then informed that raspberries aren't a useful medicinal herb.",
@@ -53,14 +53,14 @@
     "patrol_id": "gen_train_berrybush3",
     "biome": "Any",
     "season": "leaf-fall",
-    "tags": ["herbs", "training", "injury", "poisoned"],
+    "tags": ["herb", "raspberry", "training", "injury", "poisoned", "no_herbs0", "no_herbs2"],
     "intro_text": "While helping gathering herbs, r_c stumbles upon a bush of red berries.",
     "decline_text": "r_c decides not to touch the berries.",
     "chance_of_success": 80,
     "exp": 20,
     "success_text": [
         "Unsure but remembering the kittentales of red deathberries, r_c avoids them, and gives the rest of the patrol a head's up about the potentially dangerous bush.",
-        "After careful consideration, r_c recognizes them as strawberries and brings the rare berries  back to the medicine cat's den.",
+        "After careful consideration, r_c recognizes them as raspberries and brings the rare berries  back to the medicine cat's den.",
         "Astutely, s_c recognises the cranberries, and carefully chews off a branch laden with them to bring back to camp - the herb stocks can use this odd fruit."
     ],
     "fail_text": [
@@ -79,14 +79,14 @@
     "patrol_id": "gen_train_berrybush4",
     "biome": "Any",
     "season": "leaf-fall",
-    "tags": ["herbs", "training", "apprentice", "injury", "poisoned", "death"],
+    "tags": ["herb", "raspberry", "training", "apprentice", "injury", "poisoned", "death", "no_herbs0"],
     "intro_text": "While helping gathering herbs, r_c stumbles upon a bush of red berries.",
     "decline_text": "r_c decides not to touch the berries.",
     "chance_of_success": 80,
     "exp": 20,
     "success_text": [
         "Unsure but remembering the kittentales of red deathberries, app1 avoids them and alerts the patrol, who, extremely worried, confirm that this a deathberry bush.",
-        "Whatever. Identifying them is a medicine cat problem.  app1 plucks the berries and brings them back to camp, where it turns out they're called strawberries."
+        "Whatever. Identifying them is a medicine cat problem.  app1 plucks the berries and brings them back to camp, where it turns out they're called raspberries."
     ],
     "fail_text": [
         "Confidently gathering them and prancing back to camp, app1 is then informed that raspberries aren't a useful medicinal herb.",
@@ -464,7 +464,7 @@
     "success_text": [
         "Everyone has a nice practice session and their coordination with, and trust in, their Clanmates grows stronger.",
         null,
-        "s_c takes charge and coordinates exercises for the training patrol. Soon cats are using each other as springboards, practicing breaking a clanmates' fall, and working on treading exactly in each other's pawsteps."
+        "s_c takes charge and coordinates exercises for the training patrol. Soon cats are using each other as springboards, practicing breaking a Clanmates' fall, and working on treading exactly in each other's pawsteps."
     ],
     "fail_text": [
             "Unfortunately, no one steps up to teach. It's a little awkward, but the patrol disbands to attend to other duties."
@@ -510,7 +510,7 @@
     "success_text": [
         "Everyone has a nice practice session and their coordination with their Clanmates grows stronger. app1 really gets into it, and is praised for their focus and enthusiasm.",
         null,
-        "s_c takes charge and coordinates exercises for the training patrol. Soon cats are using each other as springboards, practicing breaking a clanmates' fall, and working on treading exactly in each other's pawsteps."
+        "s_c takes charge and coordinates exercises for the training patrol. Soon cats are using each other as springboards, practicing breaking a Clanmates' fall, and working on treading exactly in each other's pawsteps."
     ],
     "fail_text": [
             "Unfortunately, no one steps up to teach. It's a little awkward, but the patrol disbands to attend to other duties."
@@ -785,7 +785,7 @@
     "exp": 10,
     "success_text": [
         "As p_l nods along sympathetically, r_c describes a recent stupid decision they made. They're not looking to be absolved, but they ask p_l what they'd do in r_c's place in order to fix it - and p_l feels a lot of pride to be the cat r_c chooses to confide in.",
-        "Maybe it's a stupid idea, this vague plan r_c has been thinking about for getting more freshkill. But p_l reassures them, making them feel listened to and valued, and the cats work on the idea, evolving it together.",
+        "Maybe it's a stupid idea, this vague plan r_c has been thinking about for getting more fresh-kill. But p_l reassures them, making them feel listened to and valued, and the cats work on the idea, evolving it together.",
         "s_c knows just what to do, and the smile on r_c's face when they present their solution makes all the effort of solving things worth it."
     ],
     "fail_text": [
@@ -803,7 +803,7 @@
     "season": "Any",
     "tags": ["training", "platonic", "romantic", "no_app", "big_change", "no_change_fail"],
     "intro_text": "Quietly, r_c brings p_l aside as they work on their chores, asking for help with wording something difficult.",
-    "decline_text": "Both of them are interrupted by a request form a clanmate - this conversation will have to wait.",
+    "decline_text": "Both of them are interrupted by a request form a Clanmate - this conversation will have to wait.",
     "chance_of_success": 70,
     "exp": 10,
     "success_text": [
@@ -826,11 +826,11 @@
     "season": "Any",
     "tags": ["training", "platonic", "romantic", "no_app", "big_change"],
     "intro_text": "During an odd moment of downtime, r_c asks p_l if they think they're a good teacher.",
-    "decline_text": "They're interrupted by some clanmates who need help, and go off to attend to their duties.",
+    "decline_text": "They're interrupted by some Clanmates who need help, and go off to attend to their duties.",
     "chance_of_success": 70,
     "exp": 10,
     "success_text": [
-        "Helping their clanmates is so important, and r_c feels like they never do a good enough job. p_l interrupts them, shocked - they've always thought r_c has done great! r_c blushes and hides their nose in their paws.",
+        "Helping their Clanmates is so important, and r_c feels like they never do a good enough job. p_l interrupts them, shocked - they've always thought r_c has done great! r_c blushes and hides their nose in their paws.",
         "r_c talks about how they want to get better at mentoring and helping c_n's apprentices. p_l really admires them for their determination to always improve upon themselves.",
         "s_c describes their personal approach to teaching other cats, and r_c admires them for how much thought they put into it - it's a whole lot of work!"
     ],

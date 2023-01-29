@@ -1,5 +1,6 @@
 import random
 from .pelts import *
+from scripts.cat.sprites import Sprites
 
 # ---------------------------------------------------------------------------- #
 #                               utility functions                              #
@@ -117,6 +118,46 @@ def plural_acc_names(accessory, plural, singular):
             acc_display = 'cicada wings'
         if singular:
             acc_display = 'cicada wing'
+    elif acc_display == 'beech leaf':
+        if plural:
+            acc_display = 'beech leaves'
+        if singular:
+            acc_display = 'beech leaf'
+    elif acc_display == 'borage flower':
+        if plural:
+            acc_display = 'borage flowers'
+        if singular:
+            acc_display = 'borage flower'
+    elif acc_display == 'coltsfoot flower':
+        if plural:
+            acc_display = 'coltsfoot flowers'
+        if singular:
+            acc_display = 'coltsfoot flower'
+    elif acc_display == 'tormentil flower':
+        if plural:
+            acc_display = 'tormentil flowers'
+        if singular:
+            acc_display = 'tormentil flower'
+    elif acc_display == 'yarrow clump':
+        if plural:
+            acc_display = 'yarrow flowers'
+        if singular:
+            acc_display = 'yarrow clump'
+    elif acc_display == 'daisy flower':
+        if plural:
+            acc_display = 'daisy flowers'
+        if singular:
+            acc_display = 'daisy flower'
+    elif acc_display == 'bindweed vine':
+        if plural:
+            acc_display = 'bindweed vines'
+        if singular:
+            acc_display = 'bindweed vine'
+    elif acc_display == 'bright-eye flower':
+        if plural:
+            acc_display = 'bright-eye flowers'
+        if singular:
+            acc_display = 'bright-eye flower'
 
     if plural is True and singular is False:
         return acc_display
@@ -127,13 +168,13 @@ def plural_acc_names(accessory, plural, singular):
 #                                init functions                                #
 # ---------------------------------------------------------------------------- #
 
+
 def init_eyes(cat):
-    if cat.eye_colour is not None:
-        return
-    hit = randint(0, 200)
-    if hit == 1:
-        cat.eye_colour = choice(["BLUEYELLOW", "BLUEGREEN"])
+    if cat.eye_colour:
+        return   
     else:
+        par1 = None
+        par2 = None
         if cat.parent1 is None:
             cat.eye_colour = choice(eye_colours)
         elif cat.parent2 is None:
@@ -147,9 +188,40 @@ def init_eyes(cat):
                 par1.eye_colour, par2.eye_colour,
                 choice(eye_colours)
             ])
+        num = 120
+        if cat.white_patches in [high_white, mostly_white, 'FULLWHITE'] or cat.pelt.colour == 'WHITE':
+            num = num - 90
+        if cat.white_patches == 'FULLWHITE' or cat.pelt.colour == 'WHITE':
+            num -= 10
+        if par1:
+            if par1.eye_colour2:
+                num -= 10
+        if par2:
+            if par2.eye_colour2:
+                num -= 10
+        if num < 0:
+            num = 1
+        hit = randint(0, num)
+        if hit == 0:
+            if cat.eye_colour in yellow_eyes:
+                eye_choice = choice([blue_eyes, green_eyes, red_eyes, violet_eyes])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in blue_eyes:
+                eye_choice = choice([yellow_eyes, green_eyes, red_eyes, violet_eyes])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in green_eyes:
+                eye_choice = choice([yellow_eyes, blue_eyes, red_eyes, violet_eyes])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in red_eyes:
+                eye_choice = choice([yellow_eyes, blue_eyes, green_eyes, violet_eyes])
+                cat.eye_colour2 = choice(eye_choice)
+            elif cat.eye_colour in violet_eyes:
+                eye_choice = choice([yellow_eyes, blue_eyes, green_eyes, red_eyes])
+                cat.eye_colour2 = choice(eye_choice)
+
 
 def init_pelt(cat):
-    if cat.pelt is not None:
+    if cat.pelt != None:
         return
 
     if cat.parent2 is None and cat.parent1 in cat.all_cats.keys():
@@ -165,6 +237,59 @@ def init_pelt(cat):
                                 choice([par1.pelt.name, par2.pelt.name, None]), choice([par1.pelt.length, par2.pelt.length, None]))                  
     else:
         cat.pelt = choose_pelt(cat.gender)
+    if cat.pelt.name in ['Spotted', 'Classic', 'Mackerel', 'Sokoke']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK",
+                                      "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN",
+                                      "BROWN", "DARKBROWN"])
+    if cat.pelt.name in ['Ragdoll', 'Shaded', 'Gradient', 'Ponit']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK",
+                                      "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN",
+                                      "BROWN", "DARKBROWN", "CREAM"])
+    if cat.pelt.name in ['Cloudy', 'Pinstripe', 'Clouded', 'Merle', 'Abyssinian', 'Ghost', 'Snowflake',
+                         'Doberman', 'Agouti']:
+            cat.pelt.colour = choice(["WHITE", "PALEGREY", "SILVER", "GREY", "DARKGREY", "BLACK",
+                                      "PALEGINGER", "GOLDEN", "GINGER", "DARKGINGER", "LIGHTBROWN",
+                                      "BROWN", "DARKBROWN", "CREAM", "GHOST"])
+    if cat.pelt.name in ['Single', 'Bengal', 'Marbled', 'Speckled', 'Tabby', 'Ticked']:
+            cat.pelt.colour = choice(["BLACK", "GHOST", "DARKBROWN", "DARKGREY", "BROWN", "SILVER", "GREY", "LIGHTBROWN",
+                                  "WHITE", "PALEGREY", "PALEGINGER", "GINGER", "DARKGINGER", "GOLDEN", "WHITE2",
+                                  "BLUE", "CARAMEL", "LILAC", "DARK", "BLACK2", "PALE", "APRICOT", "CREAM",
+                                  "ORANGE", "FAWN", "CINNAMON", "CHOCOLATE", "CREAM2", "LIGHTPINK", "PINK",
+                                  "DARKPINK", "LIGHTBG", "BG", "DARKBG", "CREAM3", "PALEGINGER2", "GINGER2",
+                                  "DARKGINGER2", "LIGHTGB", "GB", "DARKGB", "LIGHTGREEN", "GREEN", "DARKGREEN",
+                                  "LIGHTPURPLE", "PURPLE", "DARKPURPLE", "SNOW", "LIGHTGREY2", "GREY2",
+                                  "DARKGREY2", "BLACK2", "EBONY", "PALEYELLOW", "YELLOW", "GOLD", "DARKCREAM",
+                                  "LIGHTGB2", "GB2", "DARKGB2", "LIGHTBROWN2", "BROWN2", "DARKBROWN2",
+                                  "WHITE3", "PALEGREY2", "LIGHTGREY3", "GREY3", "DARKGREY3", "STONE", "COAL", "OBSIDIAN",
+                                  "BLACK4", "PALECREAM", "CREAM4", "DARKCREAM2", "FAWN2", "TAN", "LIGHTBROWN3", "BROWN3",
+                                  "CHOCOLATE", "DARKBROWN3", "EBONY1", "PALEGINGER3", "LIGHTGINGER3", "GINGER3", "FIRE",
+                                  "DARKGINGER3", "RUSSET", "RED", "AUBURN", "PALELILAC", "LIGHTLILAC", "LILAC2", "DARKLILAC",
+                                  "ROSE", "LIGHTGOLD", "GOLDEN2", "DARKGOLD", "HONEY", "LIGHTSILVER", "SILVER2", "DARKSILVER",
+                                  "PALEBLUE", "LIGHTBLUE", "BLUE1", "RUSSIAN", "DARKBLUE"])
+    if cat.pelt.name in ['Smoke', 'Rosette']:
+        cat.pelt.colour = choice(["BLACK", "GHOST", "DARKBROWN", "DARKGREY", "BROWN", "SILVER", "GREY", "LIGHTBROWN",
+                                  "WHITE", "PALEGREY", "PALEGINGER", "GINGER", "DARKGINGER", "GOLDEN", "WHITE2",
+                                  "BLUE", "CARAMEL", "LILAC", "DARK", "BLACK2", "PALE", "APRICOT", "CREAM",
+                                  "ORANGE", "FAWN", "CINNAMON", "CHOCOLATE", "CREAM2",
+                                  "WHITE3", "PALEGREY2", "LIGHTGREY3", "GREY3", "DARKGREY3", "STONE", "COAL", "OBSIDIAN",
+                                  "BLACK4", "PALECREAM", "CREAM4", "DARKCREAM2", "FAWN2", "TAN", "LIGHTBROWN3", "BROWN3",
+                                  "CHOCOLATE", "DARKBROWN3", "EBONY1", "PALEGINGER3", "LIGHTGINGER3", "GINGER3", "FIRE",
+                                  "DARKGINGER3", "RUSSET", "RED", "AUBURN", "PALELILAC", "LIGHTLILAC", "LILAC2", "DARKLILAC",
+                                  "ROSE", "LIGHTGOLD", "GOLDEN2", "DARKGOLD", "HONEY", "LIGHTSILVER", "SILVER2", "DARKSILVER",
+                                  "PALEBLUE", "LIGHTBLUE", "BLUE1", "RUSSIAN", "DARKBLUE"])
+    if cat.pelt.name in ['DarkTabby', "DilutedTabby", "DilutedTabby", "Tonkinese", "DilutedTonkinese",
+                        "DilutedBengal", "DilutedSpeckled", "DilutedMarbled", "Freckled", "DilutedFreckled", "Somali", "TickedDilute", 
+                        "DilutedRosette", "DilutedClassic", "DilutedSokoke", "MackerelDilute", "DarkMackerel", "DarkSpeckled", "DarkSokoke",
+                        "DarkRosette", "DarkClassic", "DarkMarbled", "DarkBengal"]:
+        cat.pelt.colour = choice(["WHITE3", "PALEGREY2", "LIGHTGREY3", "GREY3", "DARKGREY3", "STONE", "COAL", "OBSIDIAN",
+                                  "BLACK4", "PALECREAM", "CREAM4", "DARKCREAM2", "FAWN2", "TAN", "LIGHTBROWN3", "BROWN3",
+                                  "CHOCOLATE2", "DARKBROWN3", "EBONY1", "PALEGINGER3", "LIGHTGINGER3", "GINGER3", "FIRE",
+                                  "DARKGINGER3", "RUSSET", "RED", "AUBURN", "PALELILAC", "LIGHTLILAC", "LILAC2", "DARKLILAC",
+                                  "ROSE", "LIGHTGOLD", "GOLDEN2", "DARKGOLD", "HONEY", "LIGHTSILVER", "SILVER2", "DARKSILVER",
+                                  "PALEBLUE", "LIGHTBLUE", "BLUE1", "RUSSIAN", "DARKBLUE"])
+    if cat.pelt.name in ['Tortie', 'Calico']:
+        cat.pelt.colour = choice(tortiecolours)
+
 
 def init_sprite(cat):
     if cat.pelt is None:
@@ -175,8 +300,23 @@ def init_sprite(cat):
         'elder': randint(3, 5)
     }
     cat.reverse = choice([True, False])
-    # skin chances
-    cat.skin = choice(skin_sprites)
+    hit = randint(0, 200)
+    if hit == 1:
+        cat.skin = choice(["ALBINOPINK", "ALBINOBLUE", "ALBINORED", "ALBINOVIOLET", "MELANISTICLIGHT", "MELANISTIC", "MELANISTICDARK"])
+    else:
+        if cat.parent1 is None:
+            cat.skin = choice(skin_sprites)
+        elif cat.parent2 is None:
+            par1 = cat.all_cats[cat.parent1]
+            cat.skin = choice(
+                [par1.skin, choice(skin_sprites)])
+        else:
+            par1 = cat.all_cats[cat.parent1]
+            par2 = cat.all_cats[cat.parent2]
+            cat.skin = choice([
+                par1.skin, par2.skin,
+                choice(skin_sprites)
+            ])
             
     if cat.pelt is not None:
         if cat.pelt.length != 'long':
@@ -186,6 +326,7 @@ def init_sprite(cat):
         cat.age_sprites['young adult'] = cat.age_sprites['adult']
         cat.age_sprites['senior adult'] = cat.age_sprites['adult']
         cat.age_sprites['dead'] = None
+
 
 def init_scars(cat):
     if not cat.scars:
@@ -218,49 +359,69 @@ def init_accessories(cat):
     else:
         cat.acc_display = None
 
+
 def init_pattern(cat):
-    if cat.pelt is None:
+    if cat.pelt == None:
         init_pelt(cat)
     if cat.pelt.name in ['Calico', 'Tortie']:
         cat.tortiecolour = cat.pelt.colour
-        cat.tortiebase = choice(['single', 'tabby', 'bengal', 'marbled', 'ticked', 'smoke', 'rosette', 'speckled'])
-        if cat.tortiebase == 'tabby':
-            cat.tortiepattern = 'tortietabby'
-        elif cat.tortiebase == 'bengal':
-            cat.tortiepattern = 'tortiebengal'
-        elif cat.tortiebase == 'marbled':
-            cat.tortiepattern = 'tortiemarbled'
-        elif cat.tortiebase == 'ticked':
-            cat.tortiepattern = 'tortieticked'
-        elif cat.tortiebase == 'rosette':
-            cat.tortiepattern = 'tortierosette'
-        elif cat.tortiebase == 'smoke':
-            cat.tortiepattern = 'tortiesmoke'
-        elif cat.tortiebase == 'speckled':
-            cat.tortiepattern = 'tortiespeckled'
+        cat.tortiebase = choice(tortiebases)
+        cat.tortiepattern = choice(tortiepatterns)
+    if cat.pelt.name in ['Calico', 'Tortie'] and cat.pelt.colour != None:
+        if cat.tortiepattern in [
+            'tortiepinstripe', 'tortieghost', 'tortieclouded', 'tortiemerle', 'tortiesnowflake', 
+            'tortieclassic', 'tortiesokoke', 'tortiemackerel', 'tortieagouti']:
+            cat.pattern = choice(basic_patch_colours)
         else:
-            cat.tortiepattern = 'tortietabby'
+            cat.pattern = choice(patch_colours)
+        if cat.tortiebase in ['spotted', 'classic', 'sokoke', 'mackerel']:
+            cat.tortiecolour = choice(basic_c_no_cream_no_ghost)
+        if cat.tortiebase in ['cloudy', 'ragdoll', 'shaded', 'gradient', 'ponit']:
+            cat.tortiecolour = choice(basic_colours_no_ghost)
+        if cat.tortiebase in ['pinstripe', 'doberman', 'ghost', 'clouded', 'merle', 'abyssinian', 'snowflake', 'agouti']:
+            cat.tortiecolour = choice(basic_colours)
+        if cat.tortiebase in [
+            'freckled', 'somali', 'dilutedtabby', 'dilutedbengal', 'dilutedmarbled',
+            'tickeddilute', 'somali', 'dilutedrosette', 'dilutedspeckled', 'dilutedclassic', 'dilutedsokoke',
+            'freckled', 'dilutedfreckled', 'mackereldilute', 'tonkinese', 'dilutedtonkinese']:
+            cat.tortiecolour = choice(dilute_pelt_c)
+    
+        if cat.tortiebase in ['smoke', 'rosette']:
+            cat.tortiecolour = choice(["BLACK", "GHOST", "DARKBROWN", "DARKGREY", "BROWN", "SILVER", "GREY", "LIGHTBROWN",
+                "WHITE", "PALEGREY", "PALEGINGER", "GINGER", "DARKGINGER", "GOLDEN", "WHITE2",
+                "BLUE", "CARAMEL", "LILAC", "DARK", "BLACK2", "PALE", "APRICOT", "CREAM",
+                "ORANGE", "FAWN", "CINNAMON", "CHOCOLATE", "CREAM2", "WHITE3", "PALEGREY2", "LIGHTGREY3", "GREY3", "DARKGREY3", "STONE", "COAL", "OBSIDIAN",
+                "BLACK4", "PALECREAM", "CREAM4", "DARKCREAM2", "FAWN2", "TAN", "LIGHTBROWN3", "BROWN3",
+                "CHOCOLATE", "DARKBROWN3", "EBONY1", "PALEGINGER3", "LIGHTGINGER3", "GINGER3", "FIRE",
+                "DARKGINGER3", "RUSSET", "RED", "AUBURN", "PALELILAC", "LIGHTLILAC", "LILAC2", "DARKLILAC",
+                "ROSE", "LIGHTGOLD", "GOLDEN2", "DARKGOLD", "HONEY", "LIGHTSILVER", "SILVER2", "DARKSILVER",
+                "PALEBLUE", "LIGHTBLUE", "BLUE1", "RUSSIAN", "DARKBLUE"])
+        if cat.tortiepattern in ['single', 'bengal', 'marbled', 'speckled', 'tabby', 'ticked']:
+            cat.tortiecolour = choice(tortiecolours)
+        
+        if cat.tortiebase.casefold() in dilute_pelts:
+            cat.pelt.colour = choice(dilute_pelt_c)
+
     else:
+        cat.tortiecolour = None
         cat.tortiebase = None
         cat.tortiepattern = None
-        cat.tortiecolour = None
-    if cat.pelt.name in ['Calico', 'Tortie'] and cat.pelt.colour is not None:
-        if cat.pelt.colour in ["BLACK", "DARKBROWN"]:
-            cat.pattern = choice(['GOLDONE', 'GOLDTWO', 'GOLDTHREE', 'GOLDFOUR', 'GINGERONE', 'GINGERTWO', 'GINGERTHREE', 'GINGERFOUR',
-                                    'DARKONE', 'DARKTWO', 'DARKTHREE', 'DARKFOUR'])
-        elif cat.pelt.colour in ["DARKGREY", "BROWN"]:
-            cat.pattern = choice(['GOLDONE', 'GOLDTWO', 'GOLDTHREE', 'GOLDFOUR', 'GINGERONE', 'GINGERTWO', 'GINGERTHREE', 'GINGERFOUR'])
-        elif cat.pelt.colour in ["SILVER", "GREY", "LIGHTBROWN"]:
-            cat.pattern = choice(['PALEONE', 'PALETWO', 'PALETHREE', 'PALEFOUR', 'CREAMONE', 'CREAMTWO', 'CREAMTHREE', 'CREAMFOUR'])
-    else:
-        cat.pattern = None
+
 
 def init_white_patches(cat):
     if cat.pelt is None:
         init_pelt(cat)
     non_white_pelt = False
     if cat.pelt.colour != 'WHITE' and cat.pelt.name in\
-    ['Tortie', 'TwoColour', 'Tabby', 'Speckled', 'Marbled', 'Bengal', 'Ticked', 'Smoke', 'Rosette']:
+        ['Tortie', 'TwoColour', 'Tabby', 'Speckled', 'Marbled',
+         'Bengal', 'Ticked', 'Smoke', 'Rosette', 'Merle', 'Clouded',
+         'Snowflake', 'Abyssinian', 'Doberman', 'Ghost', 'Pinstripe',
+         'Spotted', 'Cloudy', 'Classic', 'Mackerel', 'Sokoke',
+         'Gradient', 'Ponit', 'Ragdoll', 'Shaded', 'Agouti', 
+         'Freckled', 'Tonkinese', 'DilutedTabby', 'DilutedSpeckled',  'DilutedMarbled',
+         'DilutedBengal', 'TickedDilute', 'Somali', 'DilutedRosette', 'DilutedClassic', 'MackerelDilute',
+         'DilutedFreckled', 'DilutedTonkinese', 'DilutedSokoke', 'DarkTabby', 'DarkMarbled', 'DarkSpeckled',
+         'DarkBengal', 'DarkClassic', 'DarkMackerel', 'DarkSokoke', 'DarkRosette']:
         non_white_pelt = True
     if cat.pelt.white is True:
         pelt_choice = randint(0, 10)
@@ -282,7 +443,10 @@ def init_white_patches(cat):
                 cat.white_patches = choice(vit)
             else:
                 if par1.white_patches in point_markings and non_white_pelt:
-                    cat.white_patches = choice(point_markings)
+                    if pelt_choice < 5:
+                        cat.white_patches = choice(point_markings)
+                    else:
+                        cat.white_patches = choice(mid_white)
                 elif par1.white_patches in vit:
                     cat.white_patches = choice(vit)
                 elif par1.white_patches in [None, little_white, mid_white, high_white]:
@@ -292,7 +456,7 @@ def init_white_patches(cat):
             if par1.white_patches is None and cat.pelt.name == 'Calico':
                 cat.pelt.name = 'Tortie'
             # two parents
-        elif cat.parent1 is not None and cat.parent2 is not None and\
+        elif cat.parent1 and cat.parent2 and\
             cat.parent1 in cat.all_cats and cat.parent2 in cat.all_cats:
             # if 1, cat directly inherits parent 1's white patches. if 2, it directly inherits parent 2's
             par1 = cat.all_cats[cat.parent1]
@@ -313,33 +477,36 @@ def init_white_patches(cat):
                 cat.white_patches = choice(vit)
             else:
                 if par1.white_patches in point_markings and non_white_pelt\
-                or par2.white_patches in point_markings and non_white_pelt:
-                    cat.white_patches = choice(point_markings)
+                    or par2.white_patches in point_markings and non_white_pelt:
+                    if pelt_choice < 5:
+                        cat.white_patches = choice(point_markings)
+                    else:
+                        cat.white_patches = choice(mid_white)
                 elif par1.white_patches in vit and non_white_pelt\
-                or par2.white_patches in vit and non_white_pelt:
+                    or par2.white_patches in vit and non_white_pelt:
                     cat.white_patches = choice(vit)
                 elif par1.white_patches is None:
                     if par2.white_patches is None:
                         cat.pelt.white = False
                         cat.white_patches = None
                     elif par2.white_patches in little_white:
-                        white_patches_choice = random.choices(white_list, weights=(30, 70, 0, 0, 0, 0))
-                    elif par2.white_patches in mid_white:
+                        white_patches_choice = random.choices(white_list, weights=(10, 70, 20, 0, 0, 0))
+                    elif par2.white_patches in mid_white or par2.white_patches in point_markings:
                         white_patches_choice = random.choices(white_list, weights=(0, 60, 40, 0, 0, 0))
                     elif par2.white_patches in high_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 20, 60, 20, 0, 0))
                     elif par2.white_patches in mostly_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 5, 45, 30, 20, 0))
                     elif par2.white_patches == 'FULLWHITE':
-                        white_patches_choice = random.choices(white_list, weights=(5, 20, 20, 20, 20, 15))
+                        white_patches_choice = random.choices(white_list, weights=(0, 20, 20, 20, 20, 20))
                     else:
                         cat.white_patches = choice(little_white)
                 elif par1.white_patches in little_white:
                     if par2.white_patches is None:
-                        white_patches_choice = random.choices(white_list, weights=(50, 50, 0, 0, 0, 0))
+                        white_patches_choice = random.choices(white_list, weights=(20, 50, 30, 0, 0, 0))
                     elif par2.white_patches in little_white:
-                        white_patches_choice = random.choices(white_list, weights=(10, 50, 40, 0, 0, 0))
-                    elif par2.white_patches in mid_white:
+                        white_patches_choice = random.choices(white_list, weights=(5, 55, 40, 0, 0, 0))
+                    elif par2.white_patches in mid_white or par2.white_patches in point_markings:
                         white_patches_choice = random.choices(white_list, weights=(0, 40, 30, 30, 0, 0))
                     elif par2.white_patches in high_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 10, 50, 30, 10, 0))
@@ -349,12 +516,12 @@ def init_white_patches(cat):
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 0, 45, 35, 20))
                     else:
                         cat.white_patches = choice(little_white)
-                elif par1.white_patches in mid_white:
+                elif par1.white_patches in mid_white or par1.white_patches in point_markings:
                     if par2.white_patches is None:
                         white_patches_choice = random.choices(white_list, weights=(0, 60, 40, 0, 0, 0))
                     elif par2.white_patches in little_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 40, 30, 30, 0, 0))
-                    elif par2.white_patches in mid_white:
+                    elif par2.white_patches in mid_white or par2.white_patches in point_markings:
                         white_patches_choice = random.choices(white_list, weights=(0, 20, 60, 20, 0, 0))
                     elif par2.white_patches in high_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 30, 50, 20, 0))
@@ -369,7 +536,7 @@ def init_white_patches(cat):
                         white_patches_choice = random.choices(white_list, weights=(0, 20, 60, 20, 0, 0))
                     elif par2.white_patches in little_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 10, 50, 30, 10, 0))
-                    elif par2.white_patches in mid_white:
+                    elif par2.white_patches in mid_white or par2.white_patches in point_markings:
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 30, 50, 20, 0))
                     elif par2.white_patches in high_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 30, 50, 20, 0))
@@ -384,7 +551,7 @@ def init_white_patches(cat):
                         white_patches_choice = random.choices(white_list, weights=(0, 5, 45, 30, 20, 0))
                     elif par2.white_patches in little_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 25, 40, 25, 10))
-                    elif par2.white_patches in mid_white:
+                    elif par2.white_patches in mid_white or par2.white_patches in point_markings:
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 20, 50, 20, 10))
                     elif par2.white_patches in high_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 20, 30, 30, 20))
@@ -396,10 +563,10 @@ def init_white_patches(cat):
                         cat.white_patches = choice(mostly_white)
                 elif par1.white_patches == 'FULLWHITE':
                     if par2.white_patches is None:
-                        white_patches_choice = random.choices(white_list, weights=(5, 20, 20, 20, 20, 15))
+                        white_patches_choice = random.choices(white_list, weights=(0, 20, 20, 20, 20, 20))
                     elif par2.white_patches in little_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 0, 45, 35, 20))
-                    elif par2.white_patches in mid_white:
+                    elif par2.white_patches in mid_white or par2.white_patches in point_markings:
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 0, 30, 40, 30))
                     elif par2.white_patches in high_white:
                         white_patches_choice = random.choices(white_list, weights=(0, 0, 0, 25, 50, 25))
@@ -415,44 +582,59 @@ def init_white_patches(cat):
         # regular non-inheritance white patches generation
         else:
             if pelt_choice == 1 and non_white_pelt:
-                cat.white_patches = choice([point_markings])
-            elif pelt_choice == 1 and cat.pelt.name == 'TwoColour' and cat.pelt.colour != 'WHITE':
-                white_patches_choice = choice([point_markings, 'POINTMARK'])
+                cat.white_patches = choice(point_markings)
             elif pelt_choice == 2 and cat.pelt.name in ['Calico', 'TwoColour', 'Tabby', 'Speckled', 'Marbled', 'Bengal', 'Ticked', 'Smoke', 'Rosette']:
-                cat.white_patches = choice([mostly_white])
+                cat.white_patches = choice(mostly_white)
             elif pelt_choice == 3 and cat.pelt.name in ['TwoColour', 'Tabby', 'Speckled', 'Marbled', 'Bengal', 'Ticked', 'Smoke', 'Rosette']\
             and cat.pelt.colour != 'WHITE':
-                cat.white_patches = choice(['EXTRA', None, 'FULLWHITE'])
+                cat.white_patches = choice(['EXTRA', 'FULLWHITE'])
                 if cat.white_patches == None:
                     cat.pelt.white = False
             else:
                 if cat.pelt.name in ['TwoColour', 'Tabby', 'Speckled', 'Marbled', 'Bengal', 'Ticked', 'Smoke', 'Rosette']:
-                    white_patches_choice = random.choices(white_list, weights=(0, 30, 40, 30, 0, 0))
+                    white_patches_choice = random.choices(white_list, weights=(0, 30, 30, 30, 10, 0))
                 elif cat.pelt.name in ['Tortie']:
                     white_patches_choice = random.choices(white_list, weights=(0, 60, 40, 0, 0, 0))
                 elif cat.pelt.name in ['Calico']:
-                    cat.white_patches = choice([high_white])
+                    cat.white_patches = choice(high_white)
                 elif pelt_choice == 1 and vit_chance == 1 and non_white_pelt:
-                    cat.white_patches = choice([vit])
+                    cat.white_patches = choice(vit)
                 else:
                     cat.pelt.white = False
-        # just making sure no cats end up with no white patches and true white         
-        if cat.pelt.white is False:
-            cat.white_patches = None
-        elif white_patches_choice == None:
-            cat.white_patches = None
-            cat.pelt.white = False
-        elif white_patches_choice == 'EXTRA' or white_patches_choice == 'FULLWHITE' or white_patches_choice == 'POINTMARK':
-            cat.white_patches = white_patches_choice
-        else:
-            whitechoice = choice(white_patches_choice)
-            if whitechoice == None:
-                cat.pelt.white = False
+        # just making sure no cats end up with no white patches and true white 
+        if cat.white_patches == None:
+            if cat.pelt.white is False:
                 cat.white_patches = None
+                if cat.pelt.name == "Calico":
+                    cat.pelt.name = "Tortie"
+            elif white_patches_choice == None:
+                cat.white_patches = None
+                cat.pelt.white = False
+                if cat.pelt.name == "Calico":
+                    cat.pelt.name = "Tortie"
+            elif white_patches_choice == 'EXTRA' or white_patches_choice == 'FULLWHITE' or white_patches_choice == 'POINTMARK':
+                cat.white_patches = white_patches_choice
             else:
-                cat.white_patches = choice(list(whitechoice))
+                whitechoice = choice(list(white_patches_choice))
+                if whitechoice == None:
+                    cat.pelt.white = False
+                    cat.white_patches = None
+                elif type(whitechoice) == list:
+                    cat.white_patches = choice(whitechoice)
+                else:
+                    cat.white_patches = whitechoice
     else:
         cat.white_patches = None
         cat.pelt.white = False
         if cat.pelt.name == "Calico":
             cat.pelt.name = "Tortie"
+
+
+def init_tint(cat):
+    # Basic tints as possible for all colors.
+    possible_tints = Sprites.cat_tints["possible_tints"]["basic"].copy()
+    if cat.pelt.colour in Sprites.cat_tints["colour_groups"]:
+        color_group = Sprites.cat_tints["colour_groups"][cat.pelt.colour]
+        possible_tints += Sprites.cat_tints["possible_tints"][color_group]
+        cat.tint = choice(possible_tints)
+

@@ -1,14 +1,14 @@
 from .base_screens import Screens
 from .cat_screens import ProfileScreen, ChangeGenderScreen, ChangeNameScreen, CeremonyScreen
 from .clan_creation_screens import MakeClanScreen
-from .clan_screens import ClanScreen, StarClanScreen, DFScreen, ListScreen, AllegiancesScreen
+from .clan_screens import ClanScreen, StarClanScreen, DFScreen, ListScreen, AllegiancesScreen, MedDenScreen
 from .event_screens import EventsScreen
 from .organizational_screens import\
     StartScreen, SettingsScreen, SwitchClanScreen, StatsScreen
 from .patrol_screens import PatrolScreen
 from .relation_screens import\
-    RelationshipScreen, ChooseMateScreen, ViewChildrenScreen, ChooseMentorScreen
-from .world_screens import OutsideClanScreen
+    RelationshipScreen, ChooseMateScreen, ViewChildrenScreen, ChooseMentorScreen, MediationScreen
+from .world_screens import OutsideClanScreen, UnknownResScreen
 
 # ---------------------------------------------------------------------------- #
 #                                  UI RULES                                    #
@@ -56,6 +56,7 @@ clan_screen = ClanScreen('clan screen')
 list_screen = ListScreen('list screen')
 starclan_screen = StarClanScreen('starclan screen')
 df_screen = DFScreen('dark forest screen')
+med_den_screen = MedDenScreen('med den screen')
 
 # ---------------------------------------------------------------------------- #
 #                               event_screens.py                               #
@@ -86,10 +87,11 @@ choose_mate_screen = ChooseMateScreen('choose mate screen')
 choose_mentor_screen = ChooseMentorScreen('choose mentor screen')
 relationship_screen = RelationshipScreen('relationship screen')
 view_children_screen = ViewChildrenScreen('see kits screen')
+mediation_screen = MediationScreen("mediation screen")
 
 # ---------------------------------------------------------------------------- #
 #                               world_screens.py                               #
 # ---------------------------------------------------------------------------- #
 
 outside_clan_screen = OutsideClanScreen('other screen')
-# map_screen = MapScreen('map screen')
+unknown_residence_screen = UnknownResScreen('unknown residence screen')

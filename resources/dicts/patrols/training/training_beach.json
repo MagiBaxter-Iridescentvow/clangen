@@ -12,7 +12,7 @@
             "app1 listens carefully as p_l explains where to find the best prey within the rich waters of the pools.",
             "app1 picks up the instruction quicky and is soon hopping from pool to pool, picking out the tasty morsels within.",
             null,
-            "By the end of the patrol s_c is easily fishing freshkill out of the pools, not an ounce of hesitation in their movements."
+            "By the end of the patrol s_c is easily fishing fresh-kill out of the pools, not an ounce of hesitation in their movements."
     ],
     "fail_text": [
             "app1 tries to remember the differences and nuances between the creatures within the pools, but fails to retain any of the information.",
@@ -40,14 +40,14 @@
     "chance_of_success": 90,
     "exp": 20,
     "success_text": [
-            "Their clanmates come running at their yowls, and r_c is soon freed, shaken but unharmed. The patrol settles down as everyone comforts each other.",
+            "Their Clanmates come running at their yowls, and r_c is soon freed, shaken but unharmed. The patrol settles down as everyone comforts each other.",
             "p_l digs through the sand, helping r_c clear it away enough for the other cat to scramble free.",
-            "Without letting themselves panic, s_c carefully assesses the collapsed dune trapping their clanmate. They point out stable footing for the patrol to dig them out from above, and r_c is recovered, scared but okay.",
-            "Creeping in as close as possible, s_c purrs to their clanmate, keeping them calm as the patrol carefully digs down to them."
+            "Without letting themselves panic, s_c carefully assesses the collapsed dune trapping their Clanmate. They point out stable footing for the patrol to dig them out from above, and r_c is recovered, scared but okay.",
+            "Creeping in as close as possible, s_c purrs to their Clanmate, keeping them calm as the patrol carefully digs down to them."
     ],
     "fail_text": [
             "The patrol works all day to free r_C and gets nothing else done.",
-            "Harshly, s_c tells their clanmate that they're on their own - this patrol is too important to wait for some idiot who got stuck in the sand.",
+            "Harshly, s_c tells their Clanmate that they're on their own - this patrol is too important to wait for some idiot who got stuck in the sand.",
             "Hurt and wheezing, r_c hears the patrol panicking as they drift to StarClan.",
             "The patrol eventually manages to rescue r_c, but they need to be helped back to camp, battered and injured."
     ],
@@ -80,7 +80,7 @@
         null
     ],
     "fail_text": [
-        "r_c tries their best, but unfortunately, they're only able to work their head free. They yowl until their voice is hoarse and their throat is sore, and thankfully, a patrol passes by after a few hours and frees their hapless clanmate.",
+        "r_c tries their best, but unfortunately, they're only able to work their head free. They yowl until their voice is hoarse and their throat is sore, and thankfully, a patrol passes by after a few hours and frees their hapless Clanmate.",
         null,
         "Hurt and wheezing, r_c does their best to hang on and wait for a patrol, but they succumb to their injuries and drift to StarClan alone.",
         "r_c eventually manages to pull themselves free, but they're wheezing and injured. It's all they can do to find some beach grass to shelter in through the night out on the shore until a patrol finds them the next morning and helps them to the medicine den."
@@ -421,7 +421,7 @@
     "success_text": [
             "The cats go out together in the late of the day, as the gulls fly home to roost. r_c goes through their tricks, showing p_l how they use the direction of the sun to avoid casting a shadow on pools as they fish, as p_l watches with eyes that r_c notices are a bit too admiring for what's just a little trick. They smirk, showing off a little.",
             "It's a long but satisfying training session, with both cats having an in depth chance to test themselves and work on their skills. It ends with them both sitting on a little outlook, watching the sun go down and catching the last of its rays on their pelts. r_c sees p_l watching them instead of the sun, and smiles.",
-            "s_c is a fantastic hunter, and p_l isn't shy about telling them so. They blush, but work through it, showing p_l how to use the scraps of rotten freshkill from camp to attract crabs and fish in the rockpools out of their hidey-holes.",
+            "s_c is a fantastic hunter, and p_l isn't shy about telling them so. They blush, but work through it, showing p_l how to use the scraps of old crowfood from the fresh-kill pile to attract crabs and fish in the rockpools out of their hidey-holes.",
             "p_l marvels at the opportunity to have s_c's time to themselves. s_c is such a popular cat, so friendly and fun to be around, and yet when the training session draws to a close under the setting sun, s_c looks surprised to be told so."
     ],
     "fail_text": [
